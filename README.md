@@ -1,6 +1,5 @@
 # js_table
 
-
 ### SPA JS
 
 **stack te**
