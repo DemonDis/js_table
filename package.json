@@ -1,0 +1,24 @@
+{
+  "name": "js_table",
+  "version": "1.0.0",
+  "description": "Pure JS Table",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemonDis/js_table.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "execl"
+  ],
+  "author": "Dmitry Shibikin <dimas.ras@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DemonDis/js_table/issues"
+  },
+  "homepage": "https://github.com/DemonDis/js_table#readme"
+}
