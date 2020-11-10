@@ -4,16 +4,16 @@
 
 ```
 stack te
-    └── ***Webpack (Imp/Exp)***
+    └── Webpack (Imp/Exp)
     |    ├── Babel
     |    ├── SCSS
     |    ├── Eslint
     |    └── Modes
-    |         ├── ***Development***
+    |         ├── Development
     |         |   └───Dev Server, SoursceMap, Eslint, Not Minified JS & CSS
-    |         └── ***Production***
+    |         └── Production
     |             └── Minified Code
-    └── ***Git***
+    └── Git
             ├── Development
             └── Production
 ```
