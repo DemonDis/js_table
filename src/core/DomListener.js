@@ -1,4 +1,4 @@
-import {capitalize} from './utils'
+import {capitalize} from '@core/utils'
 
 export class DomListener {
   constructor($root, listeners = []) {
@@ -8,25 +8,33 @@ export class DomListener {
     this.$root = $root
     this.listeners = listeners
   }
-  initDomListeners() {
+
+  initDOMListeners() {
     this.listeners.forEach(listener => {
       const method = getMethodName(listener)
-      console.log(method)
       if (!this[method]) {
+        const name = this.name || ''
         throw new Error(
-            `Method ${method} is not implement in ${this.name || ''} Component`
+            `Method ${method} is not implemented in ${name} Component`
         )
       }
-      this.$root.on(listener, this[method].bind(this))
+      this[method] = this[method].bind(this)
+      // Тоже самое что и addEventListener
+      this.$root.on(listener, this[method])
     })
   }
 
-  removeDomListeners() {
-
+  removeDOMListeners() {
+    this.listeners.forEach(listener => {
+      const method = getMethodName(listener)
+      this.$root.off(listener, this[method])
+    })
   }
 }
 
-// input => OnInput
+// input => onInput
 function getMethodName(eventName) {
   return 'on' + capitalize(eventName)
 }
+
+
